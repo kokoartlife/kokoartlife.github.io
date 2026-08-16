@@ -1,4 +1,19 @@
 <!doctype html>
+<!--
+KOKO ART LIFE STUDIO
+EDIT-IN-PLACE VERSION
+
+Main things you may want to edit later:
+- Artwork details: search for "ORIGINAL ART / SHOP"
+- About text: search for "ABOUT KOKO"
+- Prints: search for "PRINTS"
+- Commission text: search for "COMMISSIONS"
+- Gallery images: search for "GALLERY"
+- Contact details: search for "CONTACT"
+- Footer: search for "FOOTER"
+
+Keep image filenames exactly as they appear in the /images folder.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -6,6 +21,10 @@
 <meta name="description" content="Koko Art Life Studio — original artwork, prints and custom commissions.">
 <title>Koko Art Life Studio</title>
 <style>
+/* =========================
+   KOKO ART LIFE STUDIO
+   MAIN WEBSITE STYLES
+   ========================= */
 :root{--forest:#082e22;--forest2:#0d4030;--copper:#b8734f;--copper2:#d79a78;--cream:#f4eee5;--ink:#111513}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}
 .nav{position:sticky;top:0;z-index:20;background:rgba(8,46,34,.96);color:#fff;border-bottom:1px solid rgba(184,115,79,.55)}
@@ -94,11 +113,112 @@ input,textarea,select{width:100%;padding:13px;border:1px solid #cfc4b7;backgroun
   .hero-copy h1{font-size:46px}
 }
 
+
+/* Desktop hero repair v5 */
+@media(min-width:801px){
+  .nav-inner{
+    min-height:72px;
+    padding:8px 22px;
+  }
+  .brand-logo{
+    width:76px;
+    height:60px;
+    object-fit:contain;
+  }
+  .hero{
+    position:relative;
+    display:block;
+    min-height:680px;
+    height:calc(100vh - 72px);
+    max-height:860px;
+    overflow:hidden;
+    background:#062b20;
+  }
+  .hero-banner{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    opacity:1;
+  }
+  .hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+      90deg,
+      rgba(3,28,20,.88) 0%,
+      rgba(3,28,20,.72) 26%,
+      rgba(3,28,20,.34) 47%,
+      rgba(3,28,20,.08) 68%,
+      rgba(3,28,20,.00) 100%
+    );
+  }
+  .hero-copy{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:1200px;
+    min-height:100%;
+    margin:0 auto;
+    padding:92px 54% 70px 22px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  .hero-copy .kicker{
+    font-size:12px;
+    letter-spacing:.24em;
+    white-space:nowrap;
+  }
+  .hero-copy h1{
+    width:auto;
+    max-width:620px;
+    margin:16px 0 22px;
+    font-size:clamp(58px,5.8vw,92px);
+    line-height:.88;
+    letter-spacing:-.02em;
+    text-shadow:0 3px 18px rgba(0,0,0,.28);
+  }
+  .hero-copy p{
+    width:100%;
+    max-width:500px;
+    margin:0;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .hero-copy .actions{
+    width:auto;
+    margin-top:26px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .hero-copy .btn{
+    width:auto;
+    min-width:0;
+    padding:13px 20px;
+    white-space:nowrap;
+  }
+}
+
 </style>
 </head>
 <body>
+
+<!-- =========================
+     HEADER / NAVIGATION
+     ========================= -->
 <nav class="nav"><div class="nav-inner"><a class="brand" href="#home"><img class="brand-logo" src="images/koko-logo-primary.png" alt="Koko Art Life Studio logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="brand-text brand-name"><strong>KOKO</strong>ART LIFE STUDIO</span></a><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button><div class="nav-links"><a href="#home">Home</a><a href="#shop">Originals</a><a href="#prints">Prints</a><a href="#commissions">Commissions</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div></div></nav>
+
+<!-- =========================
+     MAIN WEBSITE CONTENT
+     ========================= -->
 <main>
+
+<!-- HERO -->
 <section class="hero" id="home">
 <img class="hero-banner" src="images/koko-website-header.png" alt="" onerror="this.src='images/abstract-original.jpeg'">
 <div class="hero-overlay"></div>
@@ -110,6 +230,8 @@ input,textarea,select{width:100%;padding:13px;border:1px solid #cfc4b7;backgroun
 </div></section>
 <div class="brand-strip"><div class="brand-strip-inner"><div class="brand-strip-script">Art that feels.</div><div class="kicker">Messy • raw • real</div><div>Because art isn't just something you look at — it's something you feel.</div></div></div>
 
+
+<!-- ORIGINAL ART / SHOP -->
 <section id="shop"><div class="container"><div class="section-head"><div><div class="eyebrow">The collection</div><h2>Original Art</h2></div><p class="lead">One-of-a-kind works created by hand. Browse pieces currently available, followed by sold works from the Koko Art Life Studio collection.</p></div>
 
 <h3 style="font-family:Georgia,serif;font-size:34px;margin:0 0 22px;color:var(--forest)">Available</h3>
@@ -128,12 +250,20 @@ input,textarea,select{width:100%;padding:13px;border:1px solid #cfc4b7;backgroun
 </div>
 </div></section>
 
+
+<!-- ABOUT KOKO -->
 <section class="dark" id="about"><div class="container about"><div><div class="eyebrow">About Koko</div><h2>Art that feels.</h2><p class="lead">Koko Art Life Studio is a space for expressive, individual artwork — pieces created to bring personality, colour and feeling into everyday spaces.</p><p>From bold pop-culture pieces and atmospheric fantasy scenes to abstract colour and playful originals, the work is driven by curiosity rather than one fixed style.</p></div><div class="about-art"><img class="about-logo" src="images/koko-logo-primary.png" alt="Koko Art Life Studio" onerror="this.style.display='none'"></div></div></section>
 
+
+<!-- PRINTS -->
 <section id="prints"><div class="container"><div class="section-head"><div><div class="eyebrow">Art for your walls</div><h2>Prints</h2></div><p class="lead">Selected works will be available as prints. Contact Koko Art Life Studio to ask about a particular piece.</p></div><div class="card" style="padding:28px;background:var(--forest);color:#fff;border-color:var(--copper)"><h3 style="font-family:Georgia,serif;font-size:30px">Print collection coming soon.</h3><a class="btn primary" href="mailto:hello@kokoartlife.com?subject=Print enquiry">Ask About Prints</a></div></div></section>
 
+
+<!-- COMMISSIONS -->
 <section class="commission" id="commissions"><div class="container commission-box"><div><div class="eyebrow">Made for you</div><h2>Custom Commissions</h2><p class="lead">Have an idea, favourite character, meaningful place, animal or colour palette you want brought to life? Commission a piece created specifically for you.</p></div><form action="mailto:hello@kokoartlife.com" method="post" enctype="text/plain"><div class="field"><label>Name</label><input name="name" required></div><div class="field"><label>Email</label><input type="email" name="email" required></div><div class="field"><label>Commission type</label><select name="type"><option>Original artwork</option><option>Portrait</option><option>Pet / animal artwork</option><option>Abstract / interior artwork</option><option>Pop culture / character artwork</option><option>Other</option></select></div><div class="field"><label>Tell me about your idea</label><textarea name="message" required></textarea></div><button class="btn primary" type="submit">Send Commission Enquiry</button></form></div></section>
 
+
+<!-- GALLERY -->
 <section id="gallery"><div class="container"><div class="section-head"><div><div class="eyebrow">Selected works</div><h2>Gallery</h2></div><p class="lead">A growing portfolio of original and sold work.</p></div><div class="gallery-grid">
 <div class="gallery-item"><img src="images/giraffe-original.jpeg" alt="Giraffe artwork"></div>
 <div class="gallery-item"><img src="images/green-ranger-original.jpeg.PNG" alt="Green Ranger artwork"></div>
@@ -144,8 +274,14 @@ input,textarea,select{width:100%;padding:13px;border:1px solid #cfc4b7;backgroun
 <div class="gallery-item"><img src="images/abstract-original.jpeg" alt="Abstract artwork"></div>
 </div></div></section>
 
+
+<!-- CONTACT -->
 <section class="dark" id="contact"><div class="container commission-box"><div><div class="eyebrow">Let's talk art</div><h2>Contact Koko</h2><p class="lead">For artwork enquiries, purchases, prints or commissions, get in touch.</p><div class="social"><a href="https://www.instagram.com/kokoartlife" target="_blank" rel="noopener">Instagram / @kokoartlife</a><a href="https://www.facebook.com/kokoartlife" target="_blank" rel="noopener">Facebook / kokoartlife</a></div><p style="margin-top:22px"><a href="mailto:hello@kokoartlife.com">hello@kokoartlife.com</a></p></div><form action="mailto:hello@kokoartlife.com" method="post" enctype="text/plain"><div class="field"><label>Your name</label><input name="name" required></div><div class="field"><label>Email</label><input type="email" name="email" required></div><div class="field"><label>Enquiry</label><textarea name="message" required></textarea></div><button class="btn primary" type="submit">Send Enquiry</button></form></div></section>
 </main>
+
+<!-- =========================
+     FOOTER
+     ========================= -->
 <footer class="footer">
 <div class="footer-main">
 <div>
@@ -166,6 +302,8 @@ input,textarea,select{width:100%;padding:13px;border:1px solid #cfc4b7;backgroun
 <div class="footer-bottom">© 2026 Koko Art Life Studio • All artwork &amp; images are the property of Koko Art Life Studio</div>
 </footer>
 
+
+<!-- MOBILE MENU SCRIPT -->
 <script>
 const menuButton=document.querySelector('.mobile-menu-btn');
 const navLinks=document.querySelector('.nav-links');
